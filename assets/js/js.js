@@ -20,8 +20,11 @@ $('input').keyup(function(e){
     }
 });
 
+
      // show old data from localstorge
-$(window).on('load',function(){   
+$(document).each(function(){  
+     
+
     $('ul').val('');
     for(j=0;j<localStorage.length;j++){
             var value = localStorage.getItem(j,value);
@@ -31,12 +34,22 @@ $(window).on('load',function(){
          
     
     }
-    // $.getJSON("http://api.ipstack.com/check?access_key=ec53248cc63f76e6086144510bca796d",
-    // function (data) {
-    //     var c=data.city;
-    //     btn(c);
-    // });
+    
 }); 
+
+$(window).on('load',function() {     
+    $.getJSON("http://api.ipstack.com/check?access_key=ec53248cc63f76e6086144510bca796d",
+    function (data) {
+        var cc=data.city;
+        CheckingStatus(cc);
+    });
+});
+
+
+
+
+
+
    // entring data and safe it to local storge
 $('#button-addon2').on('click', function () {
     $('input[type="text"]').each(function () {
