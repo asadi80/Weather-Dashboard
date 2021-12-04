@@ -33,7 +33,7 @@ THEN I am again presented with current and future conditions for that city
 I only changed the style 
 
 ## Secreen Shot
-![Screenshot (13)](https://user-images.githubusercontent.com/89751266/144700087-93d6dc6e-9146-4973-8fe5-4adf07ad45a9.png)
+![Screenshot (14)](https://user-images.githubusercontent.com/89751266/144723884-a39cf0cd-e545-478d-ab47-b20f89c976a7.png)
 
 
 ## Demo

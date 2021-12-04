@@ -2,8 +2,8 @@
 
 
 body {
-    height: 90%;
-    width: 80%;
+   
+   
     margin: 5px auto;
 }
 .card {
@@ -45,7 +45,7 @@ body {
     color: black;
 }
 #container{
-    width: 200px;
+    width: 210px;
 margin-top: 10px;
 }
 h6{
@@ -97,8 +97,12 @@ li{
     background-color: red;
 }
 
-.col-8, .just {
+.just {
    display: none;
+  }
+  .col-xl-3 {
+    
+    width: 20%;
   }
   @media only screen and (max-width: 1600px)  {
     
@@ -115,4 +119,22 @@ li{
     #containermain {
         width: auto;
     }
+    .m-5 {
+        margin: 1rem!important;
+    }#h1 {
+       
+        font-size: 33px;
+    }
+    .list{
+        margin: 0px auto;
+        padding: 0px;
+    }
+    .container-fluid{
+        padding: 0px;
+    }
+    .col-xl-3 {
+    
+        width: auto;
+      }
+
 }
