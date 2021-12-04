@@ -151,16 +151,16 @@ function weatherFun(city1){
     clearFunction ();
     $(".col-8").css("display", "block");
     $(".just").css("display", "flex").delay( 1000 ).show(0);
-            let locURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city1 + '&appid=62991e1f8401bfb35cb4e91f7b51dcb8';
-            $.get(locURL )
+            let weatherURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city1 + '&appid=62991e1f8401bfb35cb4e91f7b51dcb8';
+            $.get(weatherURL )
                 .then(function (res) {
                     lat = res.coord.lat;
                     lon = res.coord.lon;
                    
                     $('#city').append(res.name);
 
-                    let weatherURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&units=imperial&appid=62991e1f8401bfb35cb4e91f7b51dcb8";
-                    $.get(weatherURL)
+                    let oneCallURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&units=imperial&appid=62991e1f8401bfb35cb4e91f7b51dcb8";
+                    $.get(oneCallURL)
                         .then(function (res) {
 
                             // converting date
