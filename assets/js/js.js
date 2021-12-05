@@ -55,7 +55,10 @@ $('#button-addon2').on('click', function () {
     $('input[type="text"]').each(function () {
         var value = $(this).val();
         if (!value) {
-            alert("Please enter city name");
+           
+                $('#model').modal().show();
+          
+           
         } else {
             
             CheckingStatus(value);
