@@ -36,7 +36,8 @@ $(document).each(function(){
     }
     
 }); 
-
+    /// this function to get your location by ip address
+    // so when you load the page the current weather will show up but did not work so far still working on it
 $(window).on('load',function() {     
     $.getJSON("http://api.ipstack.com/check?access_key=ec53248cc63f76e6086144510bca796d",
     function (data) {
@@ -55,7 +56,7 @@ $('#button-addon2').on('click', function () {
     $('input[type="text"]').each(function () {
         var value = $(this).val();
         if (!value) {
-           
+           ///// modal
                 $('#model').modal().show();
           
            
@@ -69,7 +70,7 @@ $('#button-addon2').on('click', function () {
     });
 });
 
-
+    // checking if the city exist or not
 function CheckingStatus(c){
     $.get('https://api.openweathermap.org/data/2.5/weather?q=' + c + '&appid=62991e1f8401bfb35cb4e91f7b51dcb8', function(data, statusText, xhr) {
         if(xhr.status == 200)
@@ -87,7 +88,7 @@ function CheckingStatus(c){
 
 }
 
-
+    ///saving to local storge
 function localStorageFun(x,val){
     localStorage.setItem(x, val);
     $('ul').append('<li><button type="button" class="btn btn-lg list-style-none" id="bt">'+val+'</button></li>')
@@ -176,6 +177,8 @@ function weatherFun(city1){
                                 tim = month + ' ' + date + ' ' + year;
                                 return (tim);
                             }
+
+                              ////uvi color
                             function uvIndex(u){
                                 if(u <=2){
                                     document.getElementById("uv").classList = "favorable";
